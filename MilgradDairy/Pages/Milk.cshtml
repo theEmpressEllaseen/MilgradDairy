@@ -1,0 +1,37 @@
+@page
+@model MilgradDairy.Pages.Milk
+
+@{
+    ViewBag.Title = "Milgrad Dairy | milk";
+}
+
+<div class="card-container">
+    <div class="card-item white-card">
+        <video controls autoplay muted>
+            <source src="~/video/milk.mp4" type="video/mp4">
+            Sorry, your browser does not support this video :(
+        </video>
+    </div>
+
+    <div class="card-item product-card">
+        <p>long-life milk</p>
+        <img class="thumbnail" src="~/images/milk.png" alt="Milk carton">
+        <div class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" alt="Enlarged product image">
+            <div class="caption"></div>
+        </div>
+    </div>
+
+    <div class="card-item white-card">
+        <p>the tastiest milk, with a long shelf life.<br><br>3.2% fat content - ideal for drinking, cereal, or cooking.</p>
+        <hr><p>size: 1l</p>
+        <hr><p id="price">£1.60</p>
+        <button class="submit-button" id="add-milk">add to basket</button>
+    </div>
+</div>
+
+<div class="all-products">
+    <img src="~/images/all-products.png" alt="Our product range">
+    <a asp-page="All" class="submit-button">see all products</a>
+</div>

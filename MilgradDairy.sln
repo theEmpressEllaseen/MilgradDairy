@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilgradDairy", "MilgradDairy\MilgradDairy.csproj", "{283AC6A6-2414-42F1-9D93-C5F943AD3E27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{283AC6A6-2414-42F1-9D93-C5F943AD3E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283AC6A6-2414-42F1-9D93-C5F943AD3E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283AC6A6-2414-42F1-9D93-C5F943AD3E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283AC6A6-2414-42F1-9D93-C5F943AD3E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

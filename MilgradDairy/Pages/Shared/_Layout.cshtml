@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>@ViewBag.Title</title>
+  <link rel="stylesheet" href="@Url.Content("~/css/main.css")">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@0;1&family=Poiret+One&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="keywords" content="milgrad dairy milk">
+  <meta name="author" content="Ella Lake">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/50a24806e1.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+  <script src="~/js/script.js"></script>
+</head>
+
+<body class="white-page">
+<header>
+  <a id="top"></a>
+  <nav class="large-menu">
+    <div class="nav-bar">
+      <a asp-page="Oops"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a asp-page="Index">home</a>
+      <a asp-page="All">shop</a>
+      <img src="~/images/logo.png" alt="Milgrad Dairy logo" class="logo">
+      <a asp-page="About">about</a>
+      <a asp-page="Account">account</a>
+      <a asp-page="Basket"><i class="fa-solid fa-basket-shopping"></i></a>
+    </div>
+  </nav>
+  <nav class="small-menu">
+    <div class="dropdown">
+      <button class="dropdown-button">menu</button>
+      <div class="dropdown-content">
+        <a asp-page="Oops">search</a>
+        <a asp-page="Index">home</a>
+        <a asp-page="All">shop</a>
+        <a asp-page="About">about</a>
+        <a asp-page="Account">account</a>
+        <a asp-page="Basket">basket</a>
+      </div>
+      <img src="~/images/logo.png" alt="Milgrad Dairy logo" class="logo">
+    </div>
+  </nav>
+
+  <div class="top-banner">
+    <ul id="change-page">
+      <li><button id="font-decrease">A</button></li>
+      <li><button id="font-reset">A</button></li>
+      <li><button id="font-increase">A</button></li>
+      <li><button id="light-mode">&#9788;</button></li>
+      <li><button id="dark-mode">&#9790;</button></li>
+    </ul>
+    <img src="~/images/banner.png" alt="All of our products">
+    <p>ordinary happiness from milgrad.</p>
+  </div>
+</header>
+
+@RenderBody()
+
+<div class="instagram">
+  <a asp-page="https://www.instagram.com/milgrad.ru/" target="_blank">follow us on instagram!</a>
+  <div>
+    <img src="~/images/instagram-1.jpeg" alt="A cat looking at snack bars">
+    <img src="~/images/instagram-2.jpeg" alt="A fridge full of milk">
+    <img src="~/images/instagram-3.jpeg" alt="A tub of blueberry yoghurt">
+    <img src="~/images/instagram-4.jpeg" alt="A shelf of milk">
+  </div>
+</div>
+
+<footer>
+  <div>
+    <p>join the club!
+      <br>create an account <a asp-page="Account">here</a>
+      <br>to hear about new products and discounts:</p>
+  </div>
+
+  <div>
+    <a asp-page="#top">top of page</a>
+    <p>2023© website design by Ella Lake N1038482
+      <br>images by JSC "Bryansk Dairy Plant”</p>
+  </div>
+
+  <div>
+    <ul>
+      <li><a asp-page="About">about us</a></li>
+      <li><a asp-page="terms.html">terms of service</a></li>
+      <li><a asp-page="contact.html">contact us</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

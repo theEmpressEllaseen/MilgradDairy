@@ -1,0 +1,151 @@
+.main-photo img {
+  width: 90vw;
+  margin: 0 5vw;
+  padding: 50px 0;
+}
+
+.milk-banner {
+  height: 200px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #B7C3D8;
+}
+
+.milk-banner > img {
+  padding: 0 10vw;
+  height: 200px;
+  width: auto;
+  display: flex;
+}
+
+.product-flex-container {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-flex-container * {
+  width: 50vw;
+  height: 500px;
+  display: flex;
+}
+
+.product-flex-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-flex-text * {
+  display: block;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.left-text * {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.right-text * {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.product-flex-text a {
+  color: mediumvioletred;
+  font-family: 'Lobster Two', cursive;
+  font-size: 32px;
+}
+
+.product-flex-text p {
+  color: #0013B2;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.product-flex-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #A7B9D3;
+}
+
+.product-flex-image img {
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  max-height: 40%;
+}
+
+.wallpaper {
+  padding: 50px 0;
+  position: relative;
+}
+
+.wallpaper > img {
+  width: 100%;
+  height: auto;
+}
+
+.wallpaper > p {
+  padding: 70px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px 2px #0013B2;
+  background-color: white;
+  color: mediumvioletred;
+  font-size: 16px;
+  text-align: center;
+}
+
+.all-container {
+  width: 100vw;
+  padding: 50px 0 100px 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.all-item {
+  width: 300px;
+  height: 200px;
+  margin: 30px 10px;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
+  padding: 30px;
+  box-shadow: 0 0 10px 2px gray;
+  background-color: white;
+}
+
+.all-image {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin: auto;
+  object-fit: contain;
+}
+
+.all-image > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.all-text {
+  text-align: center;
+  color: mediumvioletred;
+}
+

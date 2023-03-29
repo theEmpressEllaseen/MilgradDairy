@@ -1,0 +1,79 @@
+.small-menu {
+    display: none;
+}
+
+nav {
+    background-color: #A7B9D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+
+nav a {
+    color: black;
+}
+
+nav a:hover, footer a:hover {
+    background-color: mediumvioletred;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-bar {
+    width: 80vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 2px gray;
+    background-color: white;
+
+}
+
+.logo {
+    max-height: 80%;
+    width: auto;
+}
+
+.top-banner {
+    position: relative;
+    padding: 20px 0;
+    background-color: #A7B9D3;
+}
+
+.top-banner p {
+    color: #0013B2;
+    font-family: 'Lobster Two', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+
+#change-page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1vw 0 0;
+    background-color: #A7B9D3;
+}
+
+#change-page > li {
+    display: inline;
+}
+
+#font-decrease {
+    font-size: x-small;
+}
+
+#font-reset {
+    font-size: small;
+}
+
+#font-increase {
+    font-size: medium;
+}
+
+#light-mode {
+    font-size: large;
+}

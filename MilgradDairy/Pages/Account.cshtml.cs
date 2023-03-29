@@ -13,4 +13,17 @@ public class Account : PageModel
     {
         
     }
+
+    public IActionResult OnPost()
+    {
+        if (ModelState.IsValid)
+        {
+            return Page();
+        }
+        else
+        {
+            return Page();
+        }
+
+    }
 }

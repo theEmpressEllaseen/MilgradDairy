@@ -1,4 +1,4 @@
-@page
+@page "{name}"
 @model MilgradDairy.Pages.Butter
 
 @{
@@ -8,25 +8,25 @@
 <div class="card-container">
     <div class="card-item white-card">
         <video controls autoplay muted>
-            <source src="~/video/cat.mp4" type="video/mp4">
+            <source src="@Url.Content(Model.butter.Video)" type="video/mp4">
             Sorry, your browser does not support this video :(
         </video>
     </div>
 
     <div class="card-item product-card">
-        <p>butter</p>
-        <img class="thumbnail" src="~/images/butter.png" alt="Pack of butter">
+        <p>@Model.butter.Name</p>
+        <img class="thumbnail" src="@Url.Content(Model.butter.Image)" alt="Pack of butter">
         <div class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content"  src="~/images/butter.png" alt="Enlarged product image">
+            <img class="modal-content" src="@Url.Content(Model.butter.Image)" alt="Enlarged product image">
             <div class="caption"></div>
         </div>
     </div>
 
     <div class="card-item white-card">
-        <p>rich butter, available with or without salt.<br><br>perfect for spreading on toast or for baking delicious cakes.</p>
-        <hr><p>size: 450g</p>
-        <hr><p id="price">£2.80</p>
+        <p>@Model.butter.Description</p>
+        <hr><p>size: @Model.butter.Size</p>
+        <hr><p id="price">@Model.butter.Price</p>
         <button class="submit-button" id="add-butter">add to basket</button>
     </div>
 </div>

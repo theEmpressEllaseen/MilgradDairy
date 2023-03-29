@@ -11,29 +11,31 @@
     </div>
 
     <div class="card-item white-card" id="form-card">
-        <form action="Account" id="account-form">
+        <form method="post">
             <label asp-for="Customer.FirstName"></label>
-            <input asp-for="Customer.FirstName" type="text" id="fname" pattern="[A-Za-z]+">
+            <input asp-for="Customer.FirstName">
             <span asp-validation-for="Customer.FirstName"></span>
             
             <label asp-for="Customer.LastName"></label>
-            <input asp-for="Customer.LastName" type="text" id="lname" pattern="[A-Za-z]+">
+            <input asp-for="Customer.LastName">
             <span asp-validation-for="Customer.LastName"></span>
-
             
             <label asp-for="Customer.Email"></label>
-            <input asp-for="Customer.Email" type="email" id="email">
+            <input asp-for="Customer.Email">
             <span asp-validation-for="Customer.Email"></span>
-
             
             <label asp-for="Customer.Password"></label>
-            <input asp-for="Customer.Password" type="password" id="pwd">
+            <input asp-for="Customer.Password">
             <span asp-validation-for="Customer.Password"></span>
-
             
-            <br><label for="check-terms">i have read the terms and conditions <a asp-page="terms.html" target="_blank">here</a></label>
-            <input type="checkbox" id="check-terms" name="check-terms" required>
-            <br><input type="submit" value="submit">
+            <label asp-for="Customer.ConfirmPassword"></label>
+            <input asp-for="Customer.ConfirmPassword">
+            <span asp-validation-for="Customer.ConfirmPassword"></span>
+            
+            <br><label>i have read the terms and conditions <a asp-page="Terms" target="_blank">here</a></label>
+            <input asp-for="Customer.Accept">
+            <span asp-validation-for="Customer.Accept"></span>
+            <input type="submit" value="submit">
         </form>
     </div>
 

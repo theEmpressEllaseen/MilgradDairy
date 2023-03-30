@@ -14,8 +14,8 @@
     @foreach (var product in Model.Products)
     {
         <div class="card-item white-card">
-            <a asp-page=@product.Name><img src="@Url.Content(product.Image)" alt=@product.AltText></a>
-            <a asp-page=@product.Name>@product.Name</a>
+            <a asp-page="ViewProduct" asp-route-Name="@product.Name"><img src="@Url.Content(product.Image)" alt=@product.AltText></a>
+            <a asp-page="ViewProduct" asp-route-Name="@product.Name">@product.Name</a>
         </div>
     }
 </div>

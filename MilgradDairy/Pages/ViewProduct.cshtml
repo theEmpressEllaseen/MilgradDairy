@@ -1,22 +1,22 @@
 @page
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model MilgradDairy.Pages.Kefir
+@model MilgradDairy.Pages.ViewProduct
 
 @{
-    ViewBag.Title = "Milgrad Dairy | kefir";
+    ViewBag.Title = "Milgrad Dairy | " + @Model.Product.Name;
 }
 
 <div class="card-container">
     <div class="card-item white-card">
         <video controls autoplay muted>
-            <source src="~/video/milk.mp4" type="video/mp4">
+            <source src="@Url.Content(Model.Product.Video)" type="video/mp4">
             Sorry, your browser does not support this video :(
         </video>
     </div>
 
     <div class="card-item product-card">
-        <p>kefir</p>
-        <img class="thumbnail" src="~/images/kefir.png" alt="Kefir carton">
+        <p>@Model.Product.Name</p>
+        <img class="thumbnail" src="@Url.Content(Model.Product.Image)" alt="@Model.Product.AltText">
         <div class="modal">
             <span class="close">&times;</span>
             <img class="modal-content" alt="Enlarged product image">
@@ -25,14 +25,9 @@
     </div>
 
     <div class="card-item white-card">
-        <p>fermented probiotic drink.<br><br>a rich source of calcium, protein, and vitamin B. try it on cereal for a nutritious breakfast.</p>
-        <hr><p>size: 1l</p>
-        <hr><p id="price">£2.50</p>
+        <p>@Model.Product.Description</p>
+        <hr><p>@Model.Product.Size</p>
+        <hr><p id="price">£@Model.Product.Price</p>
         <button class="submit-button" id="add-kefir">add to basket</button>
     </div>
-</div>
-
-<div class="all-products">
-    <img src="~/images/all-products.png" alt="Our product range">
-    <a asp-page="All" class="submit-button">see all products</a>
 </div>

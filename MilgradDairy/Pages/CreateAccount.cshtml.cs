@@ -4,20 +4,24 @@ using MilgradDairy.Pages.Models;
 
 namespace MilgradDairy.Pages;
 
-public class Account : PageModel
+public class CreateAccount : PageModel
 {
+    public readonly AppDataContext Db;
+    
     [BindProperty]
-    public Customer Customer { get; set; }
+    public User User { get; set; }
 
-    public void OnGet()
+    public CreateAccount(AppDataContext db)
     {
-        
+        Db = db;
     }
 
     public IActionResult OnPost()
     {
         if (ModelState.IsValid)
         {
+            Db.Users.Add(User);
+            Db.SaveChanges();
             return Page();
         }
         else

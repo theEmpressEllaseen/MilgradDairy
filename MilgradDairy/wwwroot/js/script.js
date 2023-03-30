@@ -1,16 +1,16 @@
-$(document).ready(function(){
+$(document).ready(function () {
     // check for local storage of dark mode and font size
     if (localStorage.darkMode == 1) {
         $("*").addClass("dark-mode");
     }
     if (localStorage.fontSize) {
         if (localStorage.fontSize > 0) {
-            for (let i=0; i<localStorage.fontSize; i++) {
-                $("*").css("font-size","+=1");
+            for (let i = 0; i < localStorage.fontSize; i++) {
+                $("*").css("font-size", "+=1");
             }
         } else if (localStorage.fontSize < 0) {
-            for (let i=0; i>localStorage.fontSize; i--) {
-                $("*").css("font-size","-=1");
+            for (let i = 0; i > localStorage.fontSize; i--) {
+                $("*").css("font-size", "-=1");
             }
         }
     } else {
@@ -18,46 +18,46 @@ $(document).ready(function(){
     }
 
     // change font size on click
-    $("#font-increase").click(function(){
+    $("#font-increase").click(function () {
         let fontSize = localStorage.fontSize;
-        $("*").css("font-size","+=1");
+        $("*").css("font-size", "+=1");
         ++fontSize;
         localStorage.setItem("fontSize", fontSize);
     });
-    $("#font-decrease").click(function(){
+    $("#font-decrease").click(function () {
         let fontSize = localStorage.fontSize;
-        $("*").css("font-size","-=1");
+        $("*").css("font-size", "-=1");
         --fontSize;
         localStorage.setItem("fontSize", fontSize);
     });
-    $("#font-reset").click(function(){
+    $("#font-reset").click(function () {
         localStorage.setItem("fontSize", "0");
         location.reload();
     });
 
     // change between dark and light mode
-    $("#dark-mode").click(function(){
+    $("#dark-mode").click(function () {
         $("*").addClass("dark-mode");
         localStorage.setItem("darkMode", "1");
 
     })
-    $("#light-mode").click(function(){
+    $("#light-mode").click(function () {
         $("*").removeClass("dark-mode");
         localStorage.setItem("darkMode", "0");
     })
 
     // thumbnail image modal funcionality
-    $(".thumbnail").click(function(){
+    $(".thumbnail").click(function () {
         $(".modal").css("display", "block");
         $(".modal-content").attr("src", $(".thumbnail").attr("src"));
         $(".caption").html(this.alt);
     });
-    $(".close").click(function(){
+    $(".close").click(function () {
         $(".modal").css("display", "none");
     });
 
     // form processing
-    $("#account-form").submit(function(){
+    $("#account-form").submit(function () {
         let fname = $("#fname").val();
         localStorage.setItem("first-name", fname);
         alert("Thanks for creating an account, " + localStorage.getItem("first-name") + "!");
@@ -81,24 +81,24 @@ $(document).ready(function(){
     }
 
     // add products to basket when selected
-    $("#add-butter").click(function(){
-        let butter = (parseInt(localStorage.getItem("butter"))) +1;
+    $("#add-butter").click(function () {
+        let butter = (parseInt(localStorage.getItem("butter"))) + 1;
         localStorage.setItem("butter", butter);
     });
-    $("#add-kefir").click(function(){
-        let kefir = (parseInt(localStorage.getItem("kefir"))) +1;
+    $("#add-kefir").click(function () {
+        let kefir = (parseInt(localStorage.getItem("kefir"))) + 1;
         localStorage.setItem("kefir", kefir);
     });
-    $("#add-milk").click(function(){
-        let milk = (parseInt(localStorage.getItem("milk"))) +1;
+    $("#add-milk").click(function () {
+        let milk = (parseInt(localStorage.getItem("milk"))) + 1;
         localStorage.setItem("milk", milk);
     });
-    $("#add-snack-bar").click(function(){
-        let snackBar = (parseInt(localStorage.getItem("snackBar"))) +1;
+    $("#add-snack-bar").click(function () {
+        let snackBar = (parseInt(localStorage.getItem("snackBar"))) + 1;
         localStorage.setItem("snackBar", snackBar);
     });
-    $("#add-yoghurt").click(function(){
-        let yoghurt = (parseInt(localStorage.getItem("yoghurt"))) +1;
+    $("#add-yoghurt").click(function () {
+        let yoghurt = (parseInt(localStorage.getItem("yoghurt"))) + 1;
         localStorage.setItem("yoghurt", yoghurt);
     });
 
@@ -124,7 +124,7 @@ $(document).ready(function(){
     $(".yoghurt > .total-price").text((yoghurt * $(".yoghurt > .unit-price").text()).toFixed(2));
 
     // calculate total cost of basket
-    let column = $("table td:nth-child(4)").map(function(){
+    let column = $("table td:nth-child(4)").map(function () {
         return $(this).text();
     }).get();
     let basketTotal = 0;
@@ -134,7 +134,7 @@ $(document).ready(function(){
     $("#total > td").text("£" + basketTotal.toFixed(2));
 
     // empty basket
-    $("#clear-basket").click(function(){
+    $("#clear-basket").click(function () {
         localStorage.setItem("butter", "0");
         localStorage.setItem("kefir", "0");
         localStorage.setItem("milk", "0");

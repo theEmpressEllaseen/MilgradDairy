@@ -4,8 +4,7 @@ namespace MilgradDairy.Pages.Models;
 
 public class Product
 {
-    public int Id { get; set; }
-    
+    [Key]
     [Required(ErrorMessage="Name is required")]
     public string Name { get; set; }
     

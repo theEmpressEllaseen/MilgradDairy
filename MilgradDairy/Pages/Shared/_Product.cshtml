@@ -1,34 +1,29 @@
-@page
+@model
 @using Microsoft.AspNetCore.Mvc.TagHelpers
-@model MilgradDairy.Pages.SnackBar
-
-@{
-    ViewBag.Title = "Milgrad Dairy | snack bar";
-}
 
 <div class="card-container">
     <div class="card-item white-card">
         <video controls autoplay muted>
-            <source src="~/video/snack-bar.mp4" type="video/mp4">
+            <source src="@Url.Content(Model.Product.Video)" type="video/mp4">
             Sorry, your browser does not support this video :(
         </video>
     </div>
 
     <div class="card-item product-card">
-        <p>snack bar</p>
-        <img class="thumbnail" src="~/images/snack-bar.png" alt="Snack bar">
+        <p>@Model.Product.Name</p>
+        <img class="thumbnail" src="@Url.Content(Model.Product.Image)" alt=@Model.Product.AltText>
         <div class="modal">
             <span class="close">&times;</span>
-            <img class="modal-content" alt="Enlarged product image">
+            <img class="modal-content" src="@Url.Content(Model.Product.Image)" alt="Enlarged product image">
             <div class="caption"></div>
         </div>
     </div>
 
     <div class="card-item white-card">
-        <p>a nutritious bar for nourishment on-the-go.<br><br>currently available in four delicious flavours - check back for more!</p>
-        <hr><p>size: 50g</p>
-        <hr><p id="price">£1.10</p>
-        <button class="submit-button" id="add-snack-bar">add to basket</button>
+        <p>@Model.Product.Description</p>
+        <hr><p>size: @Model.Product.Size</p>
+        <hr><p id="price">@Model.Product.Price</p>
+        <button class="submit-button" id="add-butter">add to basket</button>
     </div>
 </div>
 

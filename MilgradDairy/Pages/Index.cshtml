@@ -12,47 +12,47 @@
 
 <div class="milk-banner">
     <img src="~/images/milk-left.jpeg" alt="Our milk cartons">
-    <a asp-page="Milk" class="submit-button">buy milk</a>
+    <a asp-page="ViewProduct" asp-route-Name="milk" class="submit-button">buy milk</a>
     <img src="~/images/milk-right.jpeg" alt="Our milk cartons">
 </div>
 
 <div class="product-flex-container">
     <div id="order-1">
-        <a asp-page="Yoghurt" class="product-flex-image">
+        <a asp-page="ViewProduct" asp-route-Name="yoghurt" class="product-flex-image">
             <img src="~/images/yoghurt.png" alt="A tub of strawberry yoghurt">
         </a>
         <div class="product-flex-text left-text">
-            <a asp-page="Yoghurt">yoghurt</a>
+            <a asp-page="ViewProduct" asp-route-Name="yoghurt">yoghurt</a>
             <p>strawberry</p>
         </div>
     </div>
 
     <div id="order-3">
-        <a asp-page="SnackBar" class="product-flex-image">
+        <a asp-page="ViewProduct" asp-route-Name="snackbar"  class="product-flex-image">
             <img src="~/images/snack-bar.png" alt="A coconut snack bar">
         </a>
         <div class="product-flex-text left-text">
-            <a asp-page="SnackBar">snack bar</a>
+            <a asp-page="ViewProduct" asp-route-Name="snackbar">snack bar</a>
             <p>coconut</p>
         </div>
     </div>
 
     <div id="order-2">
         <div class="product-flex-text right-text">
-            <a asp-page="Butter">butter</a>
+            <a asp-page="ViewProduct" asp-route-Name="butter" >butter</a>
             <p>salted</p>
         </div>
-        <a asp-page="Butter" class="product-flex-image">
+        <a asp-page="ViewProduct" asp-route-Name="butter" class="product-flex-image">
             <img src="~/images/butter.png" alt="A pack of salted butter">
         </a>
     </div>
 
     <div id="order-4">
         <div class="product-flex-text right-text">
-            <a asp-page="Kefir">kefir</a>
+            <a asp-page="ViewProduct" asp-route-Name="kefir" >kefir</a>
             <p>3.2% fat</p>
         </div>
-        <a asp-page="Kefir" class="product-flex-image">
+        <a asp-page="ViewProduct" asp-route-Name="kefir" class="product-flex-image">
             <img src="~/images/kefir.png" alt="A carton of kefir">
         </a>
     </div>

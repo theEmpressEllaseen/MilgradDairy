@@ -2,8 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MilgradDairy.Pages.Models;
 
-public class Customer
+public class User
 {
+    public int Id { get; set; }
+    
     [Required(ErrorMessage="first name is required")]
     public string FirstName { get; set; }
     
@@ -27,5 +29,4 @@ public class Customer
     
     [Required]
     public bool Accept { get; set; }
-
 }

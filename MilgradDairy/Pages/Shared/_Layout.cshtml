@@ -25,7 +25,7 @@
       <a asp-page="All">shop</a>
       <img src="~/images/logo.png" alt="Milgrad Dairy logo" class="logo">
       <a asp-page="About">about</a>
-      <a asp-page="Account">account</a>
+      <a asp-page="CreateAccount">account</a>
       <a asp-page="Basket"><i class="fa-solid fa-basket-shopping"></i></a>
     </div>
   </nav>
@@ -59,6 +59,11 @@
 
 @RenderBody()
 
+<div class="all-products">
+  <img src="~/images/all-products.png" alt="Our product range">
+  <a asp-page="All" class="submit-button">see all products</a>
+</div>
+
 <div class="instagram">
   <a asp-page="https://www.instagram.com/milgrad.ru/" target="_blank">follow us on instagram!</a>
   <div>
@@ -72,7 +77,7 @@
 <footer>
   <div>
     <p>join the club!
-      <br>create an account <a asp-page="Account">here</a>
+      <br>create an account <a asp-page="CreateAccount">here</a>
       <br>to hear about new products and discounts:</p>
   </div>
 

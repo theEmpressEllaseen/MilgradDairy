@@ -5,18 +5,17 @@ namespace MilgradDairy.Pages;
 
 public class Butter : PageModel
 {
-    public Product butter { get; set; }
+    public List<Product> Products { get; set; }
+
+    public readonly AppDataContext Db;
+
+    public Butter(AppDataContext db)
+    {
+        Db = db;
+    }
+    
     public void OnGet()
     {
-        butter = new Product
-        {
-            Name = "butter",
-            Image = "~/images/butter.png",
-            Video = "~/video/cat.mp4",
-            Description =
-            "rich butter, available with or without salt. perfect for spreading on toast or for baking delicious cakes.",
-            Size = "450g",
-            Price = "£2.80"
-        };
+        Products = Db.Products.ToList();
     }
 }

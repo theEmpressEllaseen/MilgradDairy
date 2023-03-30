@@ -1,0 +1,51 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model MilgradDairy.Pages.AddProduct
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Add Product</title>
+</head>
+<body>
+<h1>Add Product</h1>
+<div>
+    <form method="post">
+        <br><label asp-for="@Model.Product.Name"></label>
+        <input asp-for="@Model.Product.Name">
+        <span asp-validation-for="@Model.Product.Name"></span>
+
+        <br><label asp-for="@Model.Product.Image"></label>
+        <input asp-for="@Model.Product.Image">
+        <span asp-validation-for="@Model.Product.Image"></span>
+        
+        <br><label asp-for="@Model.Product.AltText"></label>
+        <input asp-for="@Model.Product.AltText">
+        <span asp-validation-for="@Model.Product.AltText"></span>
+
+        <br><label asp-for="@Model.Product.Video"></label>
+        <input asp-for="@Model.Product.Video">
+        <span asp-validation-for="@Model.Product.Video"></span>
+
+        <br><label asp-for="@Model.Product.Description"></label>
+        <input asp-for="@Model.Product.Description">
+        <span asp-validation-for="@Model.Product.Description"></span>
+
+        <br><label asp-for="@Model.Product.Size"></label>
+        <input asp-for="@Model.Product.Size">
+        <span asp-validation-for="@Model.Product.Size"></span>
+
+        <br><label asp-for="@Model.Product.Price"></label>
+        <input asp-for="@Model.Product.Price">
+        <span asp-validation-for="@Model.Product.Price"></span>
+
+        <br><input type="submit" value="submit">
+    </form>
+</div>
+</body>
+</html>

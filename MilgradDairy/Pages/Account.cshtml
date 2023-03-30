@@ -1,4 +1,5 @@
 @page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model MilgradDairy.Pages.Account
 
 @{
@@ -12,29 +13,29 @@
 
     <div class="card-item white-card" id="form-card">
         <form method="post">
-            <label asp-for="Customer.FirstName"></label>
-            <input asp-for="Customer.FirstName">
-            <span asp-validation-for="Customer.FirstName"></span>
+            <label asp-for="@Model.Customer.FirstName"></label>
+            <input asp-for="@Model.Customer.FirstName">
+            <span asp-validation-for="@Model.Customer.FirstName"></span>
             
-            <label asp-for="Customer.LastName"></label>
-            <input asp-for="Customer.LastName">
-            <span asp-validation-for="Customer.LastName"></span>
+            <label asp-for="@Model.Customer.LastName"></label>
+            <input asp-for="@Model.Customer.LastName">
+            <span asp-validation-for="@Model.Customer.LastName"></span>
             
-            <label asp-for="Customer.Email"></label>
-            <input asp-for="Customer.Email">
-            <span asp-validation-for="Customer.Email"></span>
+            <label asp-for="@Model.Customer.Email"></label>
+            <input asp-for="@Model.Customer.Email">
+            <span asp-validation-for="@Model.Customer.Email"></span>
             
-            <label asp-for="Customer.Password"></label>
-            <input asp-for="Customer.Password">
-            <span asp-validation-for="Customer.Password"></span>
+            <label asp-for="@Model.Customer.Password"></label>
+            <input asp-for="@Model.Customer.Password">
+            <span asp-validation-for="@Model.Customer.Password"></span>
             
-            <label asp-for="Customer.ConfirmPassword"></label>
-            <input asp-for="Customer.ConfirmPassword">
-            <span asp-validation-for="Customer.ConfirmPassword"></span>
+            <label asp-for="@Model.Customer.ConfirmPassword"></label>
+            <input asp-for="@Model.Customer.ConfirmPassword">
+            <span asp-validation-for="@Model.Customer.ConfirmPassword"></span>
             
             <br><label>i have read the terms and conditions <a asp-page="Terms" target="_blank">here</a></label>
-            <input asp-for="Customer.Accept">
-            <span asp-validation-for="Customer.Accept"></span>
+            <input asp-for="@Model.Customer.Accept">
+            <span asp-validation-for="@Model.Customer.Accept"></span>
             <input type="submit" value="submit">
         </form>
     </div>

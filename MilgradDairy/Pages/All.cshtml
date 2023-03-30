@@ -1,4 +1,5 @@
 @page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model MilgradDairy.Pages.All
 
 @{
@@ -9,29 +10,12 @@
     <div class="card-item product-card">
         <h1>shop all products:</h1>
     </div>
-
-    <div class="card-item white-card">
-        <a asp-page="Milk"><img src="~/images/milk.png" alt="A carton of milk"></a>
-        <a asp-page="Milk">milk</a>
-    </div>
-
-    <div class="card-item white-card">
-        <a asp-page="Butter"><img src="~/images/butter.png" alt="A pack of salted butter"></a>
-        <a asp-page="Butter">butter</a>
-    </div>
-
-    <div class="card-item white-card">
-        <a asp-page="Yoghurt"><img src="~/images/yoghurt.png" alt="A tub of banana yoghurt"></a>
-        <a asp-page="Yoghurt">yoghurt</a>
-    </div>
-
-    <div class="card-item white-card">
-        <a asp-page="Kefir"><img src="~/images/kefir.png" alt="A carton of kefir"></a>
-        <a asp-page="Kefir">kefir</a>
-    </div>
-
-    <div class="card-item white-card">
-        <a asp-page="SnackBar"><img src="~/images/snack-bar.png" alt="A vanilla snack bar"></a>
-        <a asp-page="SnackBar">snack bar</a>
-    </div>
+    
+    @foreach (var product in Model.Products)
+    {
+        <div class="card-item white-card">
+            <a asp-page=@product.Name><img src="@Url.Content(product.Image)" alt=@product.AltText></a>
+            <a asp-page=@product.Name>@product.Name</a>
+        </div>
+    }
 </div>

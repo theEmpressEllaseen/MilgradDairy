@@ -4,20 +4,24 @@ using MilgradDairy.Pages.Models;
 
 namespace MilgradDairy.Pages;
 
-public class Account : PageModel
+public class AddProduct : PageModel
 {
+    public readonly AppDataContext Db;
+    
     [BindProperty]
-    public Customer Customer { get; set; }
+    public Product Product { get; set; }
 
-    public void OnGet()
+    public AddProduct(AppDataContext db)
     {
-        
+        Db = db;
     }
-
+    
     public IActionResult OnPost()
     {
         if (ModelState.IsValid)
         {
+            Db.Products.Add(Product);
+            Db.SaveChanges();
             return Page();
         }
         else

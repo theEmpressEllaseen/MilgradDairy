@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using MilgradDairy.Pages.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var configuration = builder.Configuration;
+builder.Services.AddDbContext<AppDataContext>(options=>
+    options.UseSqlite(configuration.GetConnectionString("Default")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();

@@ -24,6 +24,5 @@ public class Product
     public string Size { get; set; }
     
     [Required(ErrorMessage="Price is required")]
-    [RegularExpression(@"^[0-9]*\\.[0-9]{2}$", ErrorMessage="Must be a number with two decimal places")]
     public double Price { get; set; }
 }

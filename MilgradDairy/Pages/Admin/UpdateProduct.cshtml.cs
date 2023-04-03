@@ -4,14 +4,14 @@ using MilgradDairy.Pages.Models;
 
 namespace MilgradDairy.Pages;
 
-public class AddProduct : PageModel
+public class UpdateProduct : PageModel
 {
     public readonly AppDataContext Db;
     
     [BindProperty]
     public Product Product { get; set; }
 
-    public AddProduct(AppDataContext db)
+    public UpdateProduct(AppDataContext db)
     {
         Db = db;
     }
@@ -20,7 +20,7 @@ public class AddProduct : PageModel
     {
         if (ModelState.IsValid)
         {
-            Db.Products.Add(Product);
+            Db.Products.Update(Product);
             Db.SaveChanges();
             return Page();
         }

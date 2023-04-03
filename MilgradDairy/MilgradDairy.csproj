@@ -10,6 +10,7 @@
         <Content Remove="wwwroot\css\site.css" />
         <Content Remove="wwwroot\js\site.js" />
         <Content Remove="Pages\Shared\_Product.cshtml" />
+        <Content Remove="Pages\Admin\**" />
     </ItemGroup>
 
     <ItemGroup>
@@ -20,15 +21,37 @@
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.0-preview.2.23128.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="2.0.0-preview1-final" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0-preview.2.23128.3">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Pages\Products" />
+      <Folder Include="Pages\ProductAdmin" />
+      <Folder Include="Pages\UserAdmin" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Pages\Admin\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Pages\Admin\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Pages\Admin\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\ProductAdmin\ProductDashboard.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\ProductAdmin\UpdateProduct.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Admin\ProductDashboard.cshtml" />
+      <_ContentIncludedByDefault Remove="Pages\Admin\UpdateProduct.cshtml" />
     </ItemGroup>
 
 </Project>

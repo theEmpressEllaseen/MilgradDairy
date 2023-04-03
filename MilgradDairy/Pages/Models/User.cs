@@ -19,7 +19,7 @@ public class User
     [Required(ErrorMessage="password is required")]
     [DataType(DataType.Password)]
     [MinLength(8, ErrorMessage="must be at least 8 characters")]
-    [RegularExpression(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$", ErrorMessage="must include at least one digit and uppercase character")]
+    [RegularExpression(@"^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,32}$", ErrorMessage="must have at least: 8 digits, one digit, one, lowercase, one uppercase")]
     public string Password { get; set; }
     
     [Required(ErrorMessage="confirm password is required")]

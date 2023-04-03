@@ -6,13 +6,13 @@ namespace MilgradDairy.Pages;
 
 public class ViewProduct : PageModel
 {
-    public Product Product { get; set; }
     public readonly AppDataContext Db;
-
     public ViewProduct(AppDataContext db)
     {
         Db = db;
     }
+    
+    public Product Product { get; set; }
 
     public IActionResult OnGet(string name)
     {
